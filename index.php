@@ -29,7 +29,7 @@ $f = fopen("inscritos.txt", "r");
 	// Lê cada uma das linhas do arquivo
 	while(!feof($f)) { 
 	    $linha = fgets($f);
-	    $nomeInscrito = trim($linha, "\n");
+	    $nomeInscrito = trim($linha);
 	    $inscritoVideo = 'http://192.168.0.107/qrcode/videos/videos.php?name='.$nomeInscrito.'.webm'; 
 
 	    QRcode::png($inscritoVideo,$nomeInscrito.'.png',QR_ECLEVEL_H , 4); 
